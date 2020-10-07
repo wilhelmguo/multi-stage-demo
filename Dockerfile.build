@@ -1,0 +1,4 @@
+FROM golang:1.13
+WORKDIR /go/src/github.com/wilhelmguo/multi-stage-demo/
+COPY main.go .
+RUN CGO_ENABLED=0 GOOS=linux go build -o http-server .
